@@ -8,7 +8,7 @@ pipeline {
     }
     stage ("Echo parameters") {
       steps {
-        echo argUrl
+        echo env.argUrl
         echo "This is to check if the child pipeline created by DSL gets auto-triggered"
       }
     }
