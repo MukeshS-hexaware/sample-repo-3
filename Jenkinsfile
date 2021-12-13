@@ -6,5 +6,10 @@ pipeline {
         echo "Hello, World"
       }
     }
+    stage ("Echo parameters") {
+      steps {
+        echo argUrl
+      }
+    }
   }
 }
