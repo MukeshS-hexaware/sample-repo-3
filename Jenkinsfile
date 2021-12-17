@@ -6,7 +6,9 @@ pipeline {
   stages {
     stage ('Shared Library') {
       steps {
-        sharedLibrary.startBuild()
+        script {
+          sharedLibrary.startBuild()
+        }
       }
     }
   }
