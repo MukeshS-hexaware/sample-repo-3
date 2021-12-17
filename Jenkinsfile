@@ -1,3 +1,13 @@
 @Library("mukesh-shared-library") _
 import com.hexaware.sharedlib.SharedLibrary
-new SharedLibrary(this).startBuild()
+def sharedLibrary = new SharedLibrary(this)
+pipeline {
+  agent any
+  stages {
+    stage ('Shared Library') {
+      steps {
+        sharedLibrary.startBuild()
+      }
+    }
+  }
+}
