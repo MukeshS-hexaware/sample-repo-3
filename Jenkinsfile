@@ -1,3 +1,2 @@
-library "mukesh-shared-library"
-import com.hexaware.sharedlib.SharedLibrary
+@Library("mukesh-shared-library") _
 new SharedLibrary(steps).startBuild()
