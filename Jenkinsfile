@@ -4,6 +4,7 @@ pipeline {
     stage ('Archive artifacts') {
       steps {
         archiveArtifacts artifacts: 'output.txt', fingerprint: true
+        cleanWs()
       }
     }
   }
